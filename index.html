@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Tracker - QA Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐛 Bug Tracker</h1>
+            <p class="subtitle">Quality Assurance Management Tool</p>
+        </header>
+        <section class="bug-form-section">
+            <h2>Report New Bug</h2>
+            <form id="bugForm">
+                <div class="form-group">
+                    <label for="bugTitle">Bug Title *</label>
+                    <input type="text" id="bugTitle" required placeholder="Brief description of the issue">
+                </div>
+                <div class="form-group">
+                    <label for="bugDescription">Description *</label>
+                    <textarea id="bugDescription" required placeholder="Detailed description of the bug" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="stepsToReproduce">Steps to Reproduce *</label>
+                    <textarea id="stepsToReproduce" required placeholder="1. Navigate to...&#10;2. Click on...&#10;3. Observe..." rows="4"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="severity">Severity *</label>
+                        <select id="severity" required>
+                            <option value="">Select severity</option>
+                            <option value="Critical">Critical</option>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status *</label>
+                        <select id="status" required>
+                            <option value="Open">Open</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Fixed">Fixed</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Submit Bug Report</button>
+            </form>
+        </section>
+        <section class="filter-section">
+            <h2>Bug List</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="filterStatus">Filter by Status:</label>
+                    <select id="filterStatus">
+                        <option value="All">All</option>
+                        <option value="Open">Open</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Fixed">Fixed</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterSeverity">Filter by Severity:</label>
+                    <select id="filterSeverity">
+                        <option value="All">All</option>
+                        <option value="Critical">Critical</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+                <button id="clearFilters" class="btn-secondary">Clear Filters</button>
+            </div>
+        </section>
+        <section class="bug-list-section">
+            <div id="bugList" class="bug-list"></div>
+            <div id="emptyState" class="empty-state">
+                <p>No bugs reported yet. Submit your first bug report above!</p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
