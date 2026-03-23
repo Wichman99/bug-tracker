@@ -24,8 +24,11 @@ JavaScript
 🧠 What I Learned
 
 How bug tracking systems are structured
+
 The importance of clear and detailed issue reporting
+
 Basics of building and organizing a web application
+
 How small bugs can affect overall functionality
 
 🧪 Test Cases
