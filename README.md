@@ -16,7 +16,9 @@ Basic interface for tracking issues
 🛠️ Technologies Used
 
 HTML
+
 CSS
+
 JavaScript
 
 🧠 What I Learned
